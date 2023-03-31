@@ -6,28 +6,49 @@
 
 // @lc code=start
 function isValid(s: string): boolean {
-    let round: number = 0;
-    let square: number = 0;
-    let curly: number = 0;
+    let order = [];
 
     for (let i = 0; i < s.length; i++) {
         const element = s[i];
-        if (element.includes('(') || element.includes(')')) {
-            round++;
+
+        // If the element is a open bracket, store in order array
+        if (element === '(' || element === '[' || element === '{') {
+            order.push(element);
         }
-        if (element.includes('[') || element.includes(']')) {
-            square++;
-        }
-        if (element.includes('{') || element.includes('}')) {
-            curly++;
+        // If the element is a close bracket
+        else {
+            // If the close bracket match the order of prev. open bracket, delete the open bracket
+            if (isCloseBracketMatch(order[order.length - 1], element)) {
+                order.pop();
+            }
+            // else return false
+            else {
+                return false;
+            }
         }
     }
 
-    console.log('round: ' + round + 'square: ' + square + 'curly: ' + curly);
-    if (round % 2 || square % 2 || curly % 2) {
+    // If there is still value in order (open is not closed yet), return false
+    if (order.length) {
         return false;
     } else {
         return true;
+    }
+}
+
+function isCloseBracketMatch(
+    openBracketChar: String,
+    closeBracketChar: String
+): boolean {
+    switch (closeBracketChar) {
+        case ')':
+            return openBracketChar === '(';
+        case ']':
+            return openBracketChar === '[';
+        case '}':
+            return openBracketChar === '{';
+        default:
+            return false;
     }
 }
 // @lc code=end
