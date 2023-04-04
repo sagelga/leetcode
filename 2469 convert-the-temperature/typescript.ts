@@ -6,8 +6,8 @@
 
 // @lc code=start
 function convertTemperature(celsius: number): number[] {
-    let kelvin = celsius + 273.15;
-    let fahrenheit = celsius * 1.8 + 32;
+    const kelvin = celsius + 273.15;
+    const fahrenheit = celsius * 1.8 + 32;
 
     return [kelvin, fahrenheit];
 }

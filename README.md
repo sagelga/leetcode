@@ -14,9 +14,9 @@ git clone https://github.com/your-username/leetcode-submission.git
 
 In order to run the code in this repository, you will need to have the following installed on your machine:
 
-Python
-Java
-C++
+-   TypeScript
+-   SQL
+-   Python
 
 ## Usage
 
