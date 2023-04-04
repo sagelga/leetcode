@@ -10,12 +10,10 @@ function twoSum(nums: number[], target: number): number[] {
         const element = nums[i];
 
         // Second number must be equal to target subtracted by element
-        var potentialSecondNumber = target - element;
-        // console.log('potentialSecondNumber: ' + potentialSecondNumber);
+        let potentialSecondNumber = target - element;
 
         // Did the second number exists?
-        var secondNumberLocation = nums.indexOf(potentialSecondNumber);
-        // console.log('secondNumberLocation: ' + secondNumberLocation);
+        let secondNumberLocation = nums.indexOf(potentialSecondNumber);
 
         if (secondNumberLocation == i) {
             continue;
@@ -25,5 +23,6 @@ function twoSum(nums: number[], target: number): number[] {
             return [secondNumberLocation, i];
         }
     }
+    return [];
 }
 // @lc code=end

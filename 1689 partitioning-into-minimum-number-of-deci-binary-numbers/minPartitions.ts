@@ -1,7 +1,9 @@
 function minPartitions(n: string): number {
-    var maxNumber = 1;
-    for (var i = 0; i < n.length; i++) {
-        var evaluatingDigit = Number(n[i]);
+    let maxNumber = 1;
+
+    for (let i = 0; i < n.length; i++) {
+        let evaluatingDigit = Number(n[i]);
+
         if (evaluatingDigit > maxNumber) {
             maxNumber = evaluatingDigit;
         }

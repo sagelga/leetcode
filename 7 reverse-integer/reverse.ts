@@ -6,10 +6,10 @@
 
 // @lc code=start
 function reverse(x: number): number {
-    let answer: number = 0;
+    let answer: number | number[];
     let negativeValue: boolean;
 
-    // Mark the number to be positive or negative
+    // Mark negativeValue flag to true if x is non-positive value
     if (x >= 0) {
         negativeValue = false;
     } else {
@@ -18,11 +18,11 @@ function reverse(x: number): number {
     }
 
     // Convert number to array
-    let answerArray = Array.from(String(x), Number);
-    // console.log(answerArray);
+    answer = Array.from(String(x), Number);
 
-    // reverse the array and convert it to Number
-    answer = Number(answerArray.reverse().join(''));
+    // Reverse the array, join back the array, and convert it to Number
+    answer.reverse().join('');
+    answer = Number(answer);
 
     // Bring back the negative value
     if (negativeValue) {
@@ -31,7 +31,7 @@ function reverse(x: number): number {
 
     // console.log(answer);
 
-    // check if the result is still go outside 32-bit integer range
+    // Check if the result is still go outside 32-bit integer range
     if (answer < -2147483648 || answer > 2147483647) {
         return 0;
     } else {

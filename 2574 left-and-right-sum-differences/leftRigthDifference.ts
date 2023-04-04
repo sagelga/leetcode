@@ -1,7 +1,7 @@
 function leftRigthDifference(nums: number[]): number[] {
-    var answer = [];
-    var leftSum = [0].concat(nums);
-    var rightSum = [0].concat(nums.reverse());
+    let answer = [];
+    let leftSum = [0].concat(nums);
+    let rightSum = [0].concat(nums.reverse());
 
     // Calculate leftSum
     leftSum = calculateSum(leftSum);

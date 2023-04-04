@@ -1,6 +1,6 @@
 function convertTemperature(celsius: number): number[] {
-    var kelvin = celsius + 273.15;
-    var fahrenheit = celsius * 1.8 + 32;
+    let kelvin = celsius + 273.15;
+    let fahrenheit = celsius * 1.8 + 32;
 
     return [kelvin, fahrenheit];
 }
