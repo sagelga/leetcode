@@ -1,3 +1,10 @@
+/*
+ * @lc app=leetcode id=1603 lang=typescript
+ *
+ * [1603] Design Parking System
+ */
+
+// @lc code=start
 class ParkingSystem {
     big: number;
     medium: number;
@@ -43,3 +50,4 @@ class ParkingSystem {
  * var obj = new ParkingSystem(big, medium, small)
  * var param_1 = obj.addCar(carType)
  */
+// @lc code=end

@@ -14,6 +14,7 @@ function countAndSay(n: number): string {
 
     return answer;
 }
+
 function numberToCount(input: string): string {
     let answer: string = '';
     let counter = 0;

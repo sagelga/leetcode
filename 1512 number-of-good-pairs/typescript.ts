@@ -18,12 +18,4 @@ function numIdenticalPairs(nums: number[]): number {
     }
     return count;
 }
-// for (let j = i + 1; j < length; j++) {
-//     // console.log(
-//     //     'nums[elementI]: ' + nums[i] + ' nums[elementJ]: ' + nums[j]
-//     // );
-//     if (nums[i] == nums[j]) {
-//         counter++;
-//     }
-// }
 // @lc code=end
